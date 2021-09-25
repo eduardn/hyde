@@ -1,0 +1,10 @@
+{
+    "env": {
+        "mocha": true,
+        "node": true
+    },
+    "ignorePatterns": "lib",
+    "root": true,
+    "extends": "eslint-config-semistandard",
+    "parser": "@babel/eslint-parser"
+}

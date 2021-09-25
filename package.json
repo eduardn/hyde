@@ -1,0 +1,33 @@
+{
+  "name": "hyde",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/eduardn/hyde.git",
+  "author": "Eduard Neculaesi <neculaesi.eduard@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/core",
+    "packages/server"
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "@babel/register": "^7.15.3",
+    "@types/chai": "^4.2.22",
+    "chai": "^4.3.4",
+    "eslint": "^7.31.0",
+    "eslint-config-semistandard": "^16.0.0",
+    "mocha": "^9.1.2",
+    "semistandard": "^16.0.1"
+  },
+  "scripts": {
+    "build:core": "babel --root-mode upward packages/core/src -d packages/core/lib",
+    "test:core": "mocha packages/core/test --require @babel/register",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@babel/eslint-parser": "^7.15.7"
+  }
+}
